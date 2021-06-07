@@ -1,0 +1,26 @@
+<section id="overview" class="parallax-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.6s">
+                <h4 class="ae-u-bolder">{{ @ERROR.code }}</h4>
+                <p>{{ @ERROR.status }}</p>
+                <check if="{{ @ERROR.code==404 }}">
+                    <true>
+                        <p>Такой страницы не существует.</p>
+                        <p>Попробуйте перейти на <a href="{{ @BASE }}">главную страницу</a> и поискать там.</p>
+                    </true>
+                    <false>
+                        <p>Возможно, что-то пошло не так, мы уже занимаемся этим и скоро всё исправим.</p>
+                        <p><small>{{ @ERROR.text }}</small></p>
+                    </false>
+                </check>
+            </div>
+                    
+            <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
+                <img src="assets/images/overview-img.jpg" class="img-responsive" alt="Overview">
+            </div>
+
+        </div>
+    </div>
+</section>

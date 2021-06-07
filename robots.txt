@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /privacypolicy
+Host: avtovykup.razbor-off.ru
